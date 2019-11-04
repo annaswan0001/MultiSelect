@@ -1,0 +1,135 @@
+$main: #224b7a;
+$main-light: #e7edf2;
+$main-dark: #33ffcc;
+$body: #081f2c;
+$background: #f5f5f5;
+$border: #ddd;
+$text: #898989;
+$dark: #444;
+
+*,
+*::before,
+*::after {
+      box-sizing: inherit;
+}
+
+.select {
+      position: relative;
+      display: block;
+      width: 340px;
+
+      &:focus {
+            outline: 0;
+
+            & .selection {
+                  box-shadow: 0 0 1px 1px $main;
+            }
+      }
+}
+
+.label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+}
+
+.selection {
+      position: relative;
+      padding: 0px;
+      border: 1px solid $border;
+      background: #fff;
+      margin-top: 30px;
+     
+}
+
+.value {
+      position: relative;
+      display: inline-block;
+      padding: 7px 10px;
+}
+
+.multiple {
+      padding-right: 30px;
+      margin-right: 5px;
+      background: $main-light;
+      color: $main;
+}
+
+.delete {
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: block;
+      padding: 6px;
+      font-size: 10px;
+      cursor: pointer;
+}
+
+.placeholder {
+      padding: 5px 10px;
+      color: $text;
+}
+
+.arrow {
+      position: absolute;
+      top: 0px;
+      right: 5px;
+      display: block;
+      padding: 6px;
+      font-size: 10px;
+      color: $text;
+}
+
+.options {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      border: solid $border;
+      border-width: 0 1px;
+      background: #fff;
+      z-index: 10000;
+}
+
+.option {
+      padding: 10px 15px;
+      border-bottom: 1px solid $border;
+      cursor: pointer;
+
+      &.selected {
+            border: 1px solid $main;
+            margin: -1px -1px 0;
+            background: $main-light;
+      }
+
+      &.focused {
+            background: $background;
+      }
+}
+
+.checkbox {
+      content: "";
+      vertical-align: top;
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      padding: 2px;
+      border: 1px solid $border;
+      border-radius: 2px;
+      margin: 2px 12px 0 0;
+      color: #fff;
+      font-size: 10px;
+
+      .selected & {
+            border-color: $main-dark;
+            background: $main;
+      }
+}
+
+.selectInput {
+      border: none;
+      outline: none;
+      width: 93%;
+      padding: 8px 12px;
+      font-size: 12px;
+}
